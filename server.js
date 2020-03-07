@@ -39,16 +39,11 @@ function sendResponse(res, err, data) {
 }
 
 // CREATE
-app.post('/users', (req, res) => {
-  User.create(
-    {
-      name: req.body.newData.name,
-      email: req.body.newData.email,
-      password: req.body.newData.password,
-    },
-    (err, data) => sendResponse(res, err, data),
-  )
-})
+app.post('/users', (req, res) =>
+  User.create({...req.body.newData}, (err, data) =>
+    sendResponse(res, err, data),
+  ),
+)
 
 app
   .route('/users/:id')
@@ -60,11 +55,7 @@ app
   .put((req, res) => {
     User.findByIdAndUpdate(
       req.params.id,
-      {
-        name: req.body.newData.name,
-        email: req.body.newData.email,
-        password: req.body.newData.password,
-      },
+      {...req.body.newData},
       {new: true},
       (err, data) => sendResponse(res, err, data),
     )
