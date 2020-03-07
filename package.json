@@ -1,5 +1,5 @@
 {
-  "name": "intermediateJS-template",
+  "name": "intermediate-node-course",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,26 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ajay Solleti <solleti.ajay@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "bcrypt": "^3.0.6",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.7",
-    "nodemon": "^1.19.3"
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.19.1"
   },
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.7"
   }
 }
